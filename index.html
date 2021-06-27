@@ -33,9 +33,11 @@
                     <li class="nav-item"> <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
-                </span>
+
+                    <a id="loginbutton"><span class="fa fa-sign-in">Login</span></a>
+  <!-- This is used to access the form  without using the javascript code!!! -->
+                    <!-- <a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span> Login</a></span> -->                  
             </div>
         </div>
     </nav>
@@ -75,7 +77,7 @@
             </div>
         </div>
     </div>
-    <div id="Reserve table" class="modal fade" role="dialog">
+    <div id="ReserveTable" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
@@ -158,7 +160,10 @@
                     <img src="img/logo.png" class="img-fluid ">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a role="button" class="btn btn-warning btn-block btn-sm" data-toggle="modal" data-target="#Reserve table"> Reserve Table</a>
+
+                    <a type="button" role="button" class="btn btn-warning btn-block btn-sm" id="reservebutton">Reserve table</a>
+ <!-- This is used to access the form  without using the javascript code!!! -->
+                    <!-- <a role="button" class="btn btn-warning btn-block btn-sm" data-toggle="modal" data-target="#ReserveTable"> Reserve Table</a> -->
 
 <!-- To create a button to scroll to a particular position in the webpage... -->
                     <!-- <a role="button" class="btn btn-warning btn-block btn-sm" href="#Reserve table"> Reserve Table</a> -->
@@ -169,6 +174,7 @@
                      data-placement="bottom" href="#Reserve table">
                         Reserve Table
                     </a> -->
+                   
                    
                 </div>
             </div>
@@ -214,7 +220,7 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    <!-- If we want two seperate buttons for play and pause..
+ <!-- If we want two seperate buttons for play and pause..
                     <div class="btn-group" id="carouselButton">
                         <button type="button" class="btn btn-danger btn-sm" id="carousel-pause">
                             <span class="fa fa-pause"></span>
@@ -223,6 +229,7 @@
                             <span class="fa fa-play"></span>
                         </button>
                     </div> -->
+                   
                     <button type="button" class="btn btn-danger btn-sm" id="carouselButton">
                         <span class="fa fa-pause" id="carousel-button-icon"></span>
                     </button>
@@ -278,7 +285,7 @@
             </div>
         </div>
 
-<!-- To create a form below.... -->
+ <!-- To create a form below.... -->
         <!-- <div class="row row-content">
             <div class="col-12 offset-2 col-sm-8">
                 <div class="card">
@@ -335,7 +342,8 @@
                     </div>
                 </div>
             </div>
-        </div> -->        
+        </div> --> 
+      
     </div>
 
     <footer class="footer">
@@ -390,7 +398,7 @@
         });
     </script> -->
     <script>
-        // The below jquery code is used when we want two seperate buttons to work....
+     // The below jquery code is used when we want two seperate buttons to work....
         // $(document).ready(function(){
         //     $('#mycarousel').carousel({interval: 2000});
         //     $('#carousel-pause').click(function(){
@@ -399,7 +407,7 @@
         //     $('#carousel-play').click(function(){
         //         $('#mycarousel').carousel('cycle');
         //     });
-        // });
+        // });   
 
         $(document).ready(function(){
             $('#mycarousel').carousel({interval: 2000});
@@ -417,6 +425,18 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
             });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $('#reservebutton').click(function(){
+                $('#ReserveTable').modal('toggle');
+            });
+            $('#loginbutton').click(function(){
+                $('#loginModal').modal('toggle');
+            })
+
         });
     </script>
 </body>
