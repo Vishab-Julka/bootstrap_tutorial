@@ -391,24 +391,26 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
     <!-- The below script is used when we want to use toggle. -->
     <!-- <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script> -->
-    <script>
-     // The below jquery code is used when we want two seperate buttons to work....
-        // $(document).ready(function(){
-        //     $('#mycarousel').carousel({interval: 2000});
-        //     $('#carousel-pause').click(function(){
-        //         $('#mycarousel').carousel('pause');
-        //     });
-        //     $('#carousel-play').click(function(){
-        //         $('#mycarousel').carousel('cycle');
-        //     });
-        // });   
+    <!-- <script>
+     The below jquery code is used when we want two seperate buttons to work....
+        $(document).ready(function(){
+            $('#mycarousel').carousel({interval: 2000});
+            $('#carousel-pause').click(function(){
+                $('#mycarousel').carousel('pause');
+            });
+            $('#carousel-play').click(function(){
+                $('#mycarousel').carousel('cycle');
+            });
+        });   
 
+        Now since we are putting all the code in js file hence commenting the below part.....
         $(document).ready(function(){
             $('#mycarousel').carousel({interval: 2000});
             $('#carouselButton').click(function(){
@@ -425,10 +427,17 @@
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
             });
+            $('#reservebutton').click(function(){
+                $('#ReserveTable').modal('toggle');
+            });
+            $('#loginbutton').click(function(){
+                $('#loginModal').modal('toggle');
+            })
         });
-    </script>
+     </script>  -->
 
-    <script>
+<!-- This script is specially to differentiate the use of modal via javascript code... -->
+    <!-- <script>
         $(document).ready(function(){
             $('#reservebutton').click(function(){
                 $('#ReserveTable').modal('toggle');
@@ -438,7 +447,7 @@
             })
 
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
